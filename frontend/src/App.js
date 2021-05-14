@@ -5,6 +5,7 @@ import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
 import HomeScreen from './screens/homeScreen';
+import ProductDetails from './screens/productDetails';
 
 function App() {
   return (
@@ -12,10 +13,8 @@ function App() {
     <Header />
     <main className="my-3">
       <Container>
-        <h1>
-          Hello, Sahaya Cyril
-        </h1>
         <Route path="/" component={HomeScreen} exact />
+        <Route path="/product/:id" component={ProductDetails} />
       </Container>
     </main>
     <Footer />
